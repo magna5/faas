@@ -2,12 +2,12 @@ version: "3.3"
 services:
     gateway:
         ports:
-            - 8080:8080
+            - 8081:8080
         image: openfaas/gateway:0.18.10
         networks:
             - functions
         environment:
-            functions_provider_url: "http://faas-swarm:8080/"
+            functions_provider_url: "http://faas-swarm:8081/"
             read_timeout: "5m5s" # Maximum time to read HTTP request
             write_timeout: "5m5s" # Maximum time to write HTTP response
             upstream_timeout: "5m" # Maximum duration of upstream function call - should be more than read_timeout and write_timeout
