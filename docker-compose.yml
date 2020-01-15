@@ -167,7 +167,7 @@ services:
             - "--config.file=/etc/prometheus/prometheus.yml"
         #   - '-storage.local.path=/prometheus'
         ports:
-            - 9090:9090
+            - 9091:9090
         networks:
             - functions
         deploy:
